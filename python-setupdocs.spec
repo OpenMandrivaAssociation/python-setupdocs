@@ -14,6 +14,7 @@ Url:		http://pypi.python.org/pypi/SetupDocs/
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Suggests:	python-sphinx >= 0.4.2
 BuildArch:	noarch
+BuildRequires:	python-setuptools
 %py_requires -d
 
 %description
