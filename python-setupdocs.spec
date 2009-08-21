@@ -1,6 +1,6 @@
 %define tarname SetupDocs
 %define name	python-setupdocs
-%define version 1.0.2
+%define version 1.0.3
 %define release %mkrel 1
 
 Summary: 	Python setuptools extension for building documentation
