@@ -1,18 +1,23 @@
 %define tarname SetupDocs
 %define name	python-setupdocs
 %define version 1.0.5
-%define release %mkrel 2
+%define	rel		3
+%if %mdkversion < 201100
+%define release %mkrel %{rel}
+%else
+%define	release	%{rel}
+%endif
 
-Summary: 	Python setuptools extension for building documentation
+Summary: 	Setuptools extension for building documentation with Sphinx
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-Source0:	%{tarname}-%{version}.tar.gz
+Source0:	http://www.enthought.com/repo/ETS/%{tarname}-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
 Url:		http://pypi.python.org/pypi/SetupDocs/
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Suggests:	python-sphinx >= 0.4.2
+Requires:	python-sphinx >= 0.4.2
 BuildArch:	noarch
 Requires:	python-setuptools
 BuildRequires:	python-setuptools
@@ -30,11 +35,13 @@ automation. It adds two commands to the setup.py command
 
 %install
 %__rm -rf %{buildroot}
-PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record=FILE_LIST
+PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 
 %clean
 %__rm -rf %{buildroot}
 
-%files -f FILE_LIST
+%files
 %defattr(-,root,root)
 %doc *.txt
+%py_sitedir/%{tarname}*
+%py_sitedir/setupdocs*
