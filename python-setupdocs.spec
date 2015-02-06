@@ -3,7 +3,7 @@
 Summary: 	Setuptools extension for building documentation with Sphinx
 Name:		python-setupdocs
 Version:	1.0.5
-Release:	3
+Release:	4
 Source0:	http://www.enthought.com/repo/ETS/%{tarname}-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
