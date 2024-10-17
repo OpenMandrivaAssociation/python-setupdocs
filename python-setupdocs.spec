@@ -8,7 +8,7 @@ Release:	5
 Source0:	https://mse.uk.distfiles.macports.org/py-setupdocs/SetupDocs-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
-Url:		http://pypi.python.org/pypi/SetupDocs/
+Url:		https://pypi.python.org/pypi/SetupDocs/
 Requires:	python-sphinx >= 0.4.2
 BuildArch:	noarch
 BuildSystem:	python
