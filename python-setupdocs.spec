@@ -10,6 +10,7 @@ License:	BSD
 Group:		Development/Python
 Url:		https://pypi.python.org/pypi/SetupDocs/
 Requires:	python-sphinx >= 0.4.2
+BuildRequires:	python%{pyver}dist(future)
 BuildArch:	noarch
 BuildSystem:	python
 
@@ -18,7 +19,7 @@ SetupDocs is a setuptools extension that help doc building
 automation. It adds two commands to the setup.py command
 
 %prep -a
-find . -name "*.py" |xargs 2to3 -w
+find . -name "*.py" |xargs futurize -0 -w
 
 %files
 %doc *.txt
