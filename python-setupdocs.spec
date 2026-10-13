@@ -4,7 +4,7 @@
 Name:		python-setupdocs
 Summary: 	Setuptools extension for building documentation with Sphinx
 Version:	1.0.5
-Release:	6
+Release:	7
 # Original source seems dead, but some guys have a cache...
 Source0:	https://mse.uk.distfiles.macports.org/py-setupdocs/SetupDocs-%{version}.tar.gz
 License:	BSD
